@@ -1,0 +1,2 @@
+class WeblogController < ApplicationController
+end
