@@ -10,12 +10,11 @@
   %body
     %headr.header
       .header__back-image
-        %span.header__back-image__title
-          MiniWebLog
+        = link_to "MiniWebLog",root_path, class: "header__back-image__title"
         .header__back-image__menu
           = link_to root_path, class: "header__back-image__menu__mypage" do
             = fa_icon("cog 3x")
-          = link_to root_path, class: "header__back-image__menu__post" do
+          = link_to new_weblog_path, class: "header__back-image__menu__post" do
             = fa_icon("paper-plane 3x")
           = link_to root_path, class: "header__back-image__menu__logout" do
             = fa_icon("sign-out 3x")
