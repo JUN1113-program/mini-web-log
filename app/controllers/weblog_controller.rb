@@ -3,7 +3,7 @@ class WeblogController < ApplicationController
   end
 
   def new
-    
+
   end
 
   def create
@@ -14,5 +14,12 @@ class WeblogController < ApplicationController
   end
 
   def update
+  end
+
+  def show
+  end
+
+  def destroy
+    redirect_to root_path
   end
 end
