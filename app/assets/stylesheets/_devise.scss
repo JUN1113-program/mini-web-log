@@ -1,0 +1,37 @@
+$padding-height: 200px;
+.devise-body{
+  padding-top: $padding-height;
+  height: calc(100vh - #{$padding-height});
+  width: 100%;
+  background-color: azure;
+  .devise{
+    display: flex;
+    flex-flow: column wrap;
+    height: 500px;
+    width: 500px;
+    border: double 5px black;
+    margin: 0 auto;
+    box-shadow: 0 0 10px gray;
+    background-color: white;
+    & h2{
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+      border-bottom: dotted 2px gray;
+      padding-top:30px;
+      margin-bottom: 70px;
+    }
+    & .new_user{
+      font-size: 18px;
+      text-align: center;
+      border-bottom: dotted 2px gray;
+      padding-bottom: 100px;
+    }
+    & .if_sessions{
+      text-align: right;
+      & a{
+        @include reset_a-tag(gray);
+      }
+    }
+  }
+}
