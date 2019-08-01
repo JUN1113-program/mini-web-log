@@ -10,3 +10,11 @@
   -moz-appearance: none;
   appearance: none;
 }
+
+@mixin clearfloat {
+  &:after{
+    content: "";
+    clear: both;
+    display: inline-block;
+  }
+}
