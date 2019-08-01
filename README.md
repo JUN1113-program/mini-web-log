@@ -20,7 +20,7 @@ user/editでユーザー情報を編集できるように
 
 ## Railsのコード記述  
 所要時間( 300分)  
-deviseのインストールとSetting   
+~~deviseのインストールとSetting~~   
 ブログの投稿機能の実装 create  
 ブログの編集と削除の実装 edit update destory  
 routingの設定(resoucesで一括)
