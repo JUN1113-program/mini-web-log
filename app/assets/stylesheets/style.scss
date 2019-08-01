@@ -43,7 +43,7 @@
         background-color: transparent;
         text-shadow: 0 0 4px gray;
       }
-      &__logout{
+      &__inout{
         line-height: 100px;
         text-align: center;
         @include reset_a-tag($icon);

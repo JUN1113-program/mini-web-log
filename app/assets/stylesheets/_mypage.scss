@@ -1,0 +1,9 @@
+.mypage-area{
+  width: 75%;
+  height: auto;
+  background-color: $light-green;
+  float: left;
+  &__user-name{
+    text-align: center;
+  }
+}

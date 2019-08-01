@@ -16,7 +16,11 @@
             = fa_icon("cog 3x")
           = link_to new_weblog_path, class: "header__back-image__menu__post" do
             = fa_icon("paper-plane 3x")
-          = link_to root_path, class: "header__back-image__menu__logout" do
-            = fa_icon("sign-out 3x")
+          - if user_signed_in?
+            = link_to destroy_user_session_path, class: "header__back-image__menu__inout", method: :delete do
+              = fa_icon("sign-out 3x")
+          - else
+            = link_to new_user_session_path, class: "header__back-image__menu__inout" do
+              = fa_icon("sign-in 3x")
 
     = yield
