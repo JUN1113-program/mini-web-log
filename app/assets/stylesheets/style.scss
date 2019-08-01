@@ -1,0 +1,54 @@
+.header{
+  height: 100px;
+  width: 100%;
+  background: url("https://cdn.pixabay.com/photo/2015/08/13/01/00/keyboard-886462_1280.jpg");
+  background-size: cover;
+  position: fixed;
+  font-weight: bold;
+
+  &__back-image{
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px gray;
+    &__title{
+      margin-left: 100px;
+      font-size: 70px;
+      text-align: center;
+    }
+    &__menu{
+      width: 400px;
+      height: 80px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      border: 5px double black;
+      background-color: azure;
+      border-radius: 20px;
+      float: right;
+      margin-top:5px;
+      margin-right: 10px;
+      box-shadow: 0 0 5px gray;
+      &__mypage{
+        line-height: 100px;
+        text-align: center;
+        @include reset_a-tag($icon);
+        background-color: transparent;
+        text-shadow: 0 0 4px gray;
+      }
+      &__post{
+        line-height: 100px;
+        text-align: center;
+        @include reset_a-tag($icon);
+        background-color: transparent;
+        text-shadow: 0 0 4px gray;
+      }
+      &__logout{
+        line-height: 100px;
+        text-align: center;
+        @include reset_a-tag($icon);
+        background-color: transparent;
+        text-shadow: 0 0 4px gray;
+      }
+    }
+  }
+}

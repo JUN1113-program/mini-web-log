@@ -1,0 +1,10 @@
+// 変数やmixinの宣言
+@import "reset";
+@import "config/color";
+@import "mixin/reset_form";
+@import "mixin/word-setting";
+@import "font-awesome";
+
+// スタイルシートの宣言
+@import "style";
+@import "index";

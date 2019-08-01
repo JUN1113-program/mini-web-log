@@ -8,4 +8,16 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %headr.header
+      .header__back-image
+        %span.header__back-image__title
+          MiniWebLog
+        .header__back-image__menu
+          = link_to root_path, class: "header__back-image__menu__mypage" do
+            = fa_icon("cog 3x")
+          = link_to root_path, class: "header__back-image__menu__post" do
+            = fa_icon("paper-plane 3x")
+          = link_to root_path, class: "header__back-image__menu__logout" do
+            = fa_icon("sign-out 3x")
+
     = yield
