@@ -1,0 +1,7 @@
+.flex-contener
+  = form_for @weblog ,html: {class: "create-area"} do |f|
+    = f.text_field :title, class: "create-area__title", placeholder: @weblog.title
+    = f.text_area :content, class: "create-area__content", placeholder: @weblog.content
+    = f.submit :submit, class: "create-area__submit", value: "UPDATE",method: :patch
+  .side-bar
+    サイドバーです
