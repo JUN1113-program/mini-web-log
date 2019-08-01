@@ -1,0 +1,14 @@
+.weblogs
+  .weblogs__title
+    = weblog.title
+  .weblogs__content
+    = weblog.content
+  .weblogs__editor
+    = link_to user_path(weblog.user.id) do
+      = weblog.user.email
+  .weblogs__date
+    = l(weblog.created_at, format: :long)
+  - if user_signed_in?
+    - if weblog.user.id == current_user.id
+      = link_to "Edit",edit_weblog_path(weblog.id), class: "weblogs__edit"
+      = link_to "Delete", weblog_path(weblog.id), class: "weblogs__destroy", method: :delete
