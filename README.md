@@ -28,6 +28,7 @@ routingの設定(resoucesで一括)
 - web-logコントローラー
 - commentsコントローラー
 - usersコントローラーはdeviseで   
+
 modelの作成
 - usersはデバイスで
 - Blog-model
