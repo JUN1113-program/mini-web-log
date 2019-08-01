@@ -19,7 +19,9 @@
   &__editor{
     float: right;
     font-size: 10px;
-    color: gray;
+    & a{
+      @include reset_a-tag(gray);
+    }
   }
   &__date{
     clear: both;
