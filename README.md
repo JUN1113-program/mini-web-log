@@ -1,24 +1,25 @@
-# README
+# 進行表
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
+---
+## DateBase設計
+---
+所要時間( 30分)  
+ER図  
+create_DB.mdの編集  
 
-Things you may want to cover:
+### 仮置のビューとスタイルシートを作成
+---
+所要時間( 240分)  
+applicationでheader領域の作成  
+indexでメインのブログ一覧が表示されるように  
+showでブログの詳細が表示されるように  
+searchでブログ内容の検索ができるように  
+editでブログの編集画面へ  
+createでブログの作成画面へ  
+login画面でログインできるように  
+sign_in画面でアカウントを作れるように  
+user/editでユーザー情報を編集できるように  
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Railsのコード記述
+---
