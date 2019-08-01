@@ -1,0 +1,47 @@
+.flex-contener
+  .index-area
+    .weblogs
+      .weblogs__title
+        今日も一日お疲れさまでした
+      .weblogs__content
+        一日頑張ったらお腹が減りましたね
+        そんなときのおすすめがパスタです
+        美味しいパスタを食べるとお腹が膨れますよね</br>
+        = image_tag "https://www.club.t-fal.co.jp/images/recipe/user/1/1005/main.jpg"
+      .weblogs__editor
+        田中太郎
+      .weblogs__date
+        2019/11/11 22:00
+      = link_to "Edit",edit_weblog_path(1), class: "weblogs__edit"
+      = link_to "Delete", weblog_path(1), class: "weblogs__destroy", method: :delete
+
+    .weblogs
+      .weblogs__title
+        今日も一日頑張りましょう！
+      .weblogs__content
+        今日も一日頑張りましょう！本日のおすすめパスタはアサリのボンゴレパスタです！ごろごろとしたアサリが噛みごたえがあってパスタとの相性は抜群！
+        砂抜きはしてありますが、食べられる際はお気をつけて…</br>
+        = image_tag "http://52.193.131.7/homecook/search/recipe/img/00003854.jpg"
+      .weblogs__editor
+        田中太郎
+      .weblogs__date
+        2019/11/12 9:30
+      = link_to "Edit",edit_weblog_path(1), class: "weblogs__edit"
+      = link_to "Delete", weblog_path(1), class: "weblogs__destroy", method: :delete
+
+
+    .weblogs
+      .weblogs__title
+        今日も一日お疲れさまでした…
+      .weblogs__content
+        ボンゴレパスタは1皿も出ませんでした…これからみんなでアサリを食べるパーティです！</br>
+        = image_tag "http://www.nissui.co.jp/recipe/images/19/01045.jpg"
+      .weblogs__editor
+        田中太郎
+      .weblogs__date
+        2019/11/12 9:30
+      = link_to "Edit",edit_weblog_path(1), class: "weblogs__edit"
+      = link_to "Delete", weblog_path(1), class: "weblogs__destroy", method: :delete
+
+  .side-bar
+    サイドバーです
