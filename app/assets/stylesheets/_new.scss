@@ -1,0 +1,21 @@
+.create-area{
+  width: 75%;
+  float: left;
+  display: flex;
+  flex-flow: column nowrap;
+  &__title{
+    width: 500px;
+    margin: 50px auto 0px;
+  }
+  &__content{
+    width: 500px;
+    min-height: 500px;
+    height: auto;
+    margin: 20px auto;
+  }
+  &__submit{
+    height: 50px;
+    width: 100px;
+    margin: 0 auto;
+  }
+}
