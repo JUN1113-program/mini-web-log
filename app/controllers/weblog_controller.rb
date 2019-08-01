@@ -4,7 +4,7 @@ class WeblogController < ApplicationController
   end
 
   def new
-
+    @log = Blog.new
   end
 
   def create
@@ -22,5 +22,10 @@ class WeblogController < ApplicationController
 
   def destroy
     redirect_to root_path
+  end
+  private
+  
+  def blog_params
+    # params.require(:).permit(:title,:content)
   end
 end
