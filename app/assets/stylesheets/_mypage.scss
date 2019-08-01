@@ -1,6 +1,7 @@
 .mypage-area{
   width: 75%;
   height: auto;
+  min-height: calc(100vh - 100px);
   background-color: $light-green;
   float: left;
   &__user-name{
