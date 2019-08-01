@@ -21,18 +21,18 @@ user/editでユーザー情報を編集できるように
 ## Railsのコード記述  
 所要時間( 300分)  
 ~~deviseのインストールとSetting~~   
-ブログの投稿機能の実装 create  
-ブログの編集と削除の実装 edit update destory  
-routingの設定(resoucesで一括)
-- web-logコントローラー
-- usersコントローラーはdeviseで   
+~~ブログの投稿機能の実装 create~~  
+~~ブログの編集と削除の実装 edit update destory~~  
+~~routingの設定(resoucesで一括)~~
+- ~~web-logコントローラー~~
+- ~~usersコントローラーはdeviseで~~   
 - commentsコントローラー  
 
 modelの作成
-- usersはデバイスで
-- Blog-model
-- アソシエーションの設定  
-- DBの実装  
+- ~~usersはデバイスで~~
+- ~~Blog-model~~
+- ~~アソシエーションの設定~~  
+- ~~DBの実装~~  
 - comment-model
 - imageはcarrywaveとminimagikで
 
