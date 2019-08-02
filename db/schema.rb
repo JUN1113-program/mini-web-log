@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_01_095017) do
+ActiveRecord::Schema.define(version: 2019_08_02_073235) do
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "rate"
+    t.text "comments", null: false
+    t.bigint "weblog_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_comments_on_user_id"
+    t.index ["weblog_id"], name: "index_comments_on_weblog_id"
+  end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image", null: false
@@ -42,6 +53,8 @@ ActiveRecord::Schema.define(version: 2019_08_01_095017) do
     t.index ["user_id"], name: "index_weblogs_on_user_id"
   end
 
+  add_foreign_key "comments", "users"
+  add_foreign_key "comments", "weblogs"
   add_foreign_key "images", "weblogs"
   add_foreign_key "weblogs", "users"
 end
