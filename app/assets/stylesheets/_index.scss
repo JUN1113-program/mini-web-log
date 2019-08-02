@@ -2,10 +2,10 @@
   padding-top: 100px;
   width: 100%;
   .index-area{
-    width: 75%;
-    height: auto;
-    min-height: calc(100vh - 100px);
-    background-color: $light-green;
-    float: left;
+    @include main-area;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    justify-content: space-around;
   }
 }
