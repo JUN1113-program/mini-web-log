@@ -22,3 +22,18 @@
   }
   text-decoration: none;
 }
+
+@mixin card {
+  background-color: white;
+  border-bottom: solid 1px black;
+  border-right: solid 1px black;
+  margin: 10px 0 5px;
+  height: 120px;
+  padding: 10px;
+  width: 500px;
+  box-shadow: 0 0 5px $card-color;
+  &:hover{
+    box-shadow: 0 0 10px $card-color;
+  }
+}
+}
