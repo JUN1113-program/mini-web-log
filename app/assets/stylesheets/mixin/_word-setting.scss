@@ -36,4 +36,14 @@
     box-shadow: 0 0 10px $card-color;
   }
 }
+
+@mixin main-area {
+  width: 75%;
+  height: auto;
+  min-height: calc(100vh - 100px);
+  background-color: $main-color;
+  float: left;
+  padding: 10px 0;
+}
+
 }
