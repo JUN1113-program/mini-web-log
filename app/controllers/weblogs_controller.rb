@@ -24,6 +24,7 @@ class WeblogsController < ApplicationController
   end
 
   def show
+    @weblog = Weblog.find(params[:id])
   end
 
   def destroy
