@@ -4,6 +4,7 @@
   background: url("https://cdn.pixabay.com/photo/2015/08/13/01/00/keyboard-886462_1280.jpg");
   background-size: cover;
   position: fixed;
+  z-index: 10;
   font-weight: bold;
 
   &__back-image{

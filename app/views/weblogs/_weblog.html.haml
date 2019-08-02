@@ -1,8 +1,9 @@
 .weblogs
   .weblogs__title
-    = weblog.title
+    = link_to weblog_path(weblog.id) do
+      = weblog.title
   .weblogs__content
-    = weblog.content
+    = weblog.content.truncate(100, omission: "   ", separator: "。")
   .weblogs__editor
     = link_to user_path(weblog.user.id) do
       = weblog.user.email

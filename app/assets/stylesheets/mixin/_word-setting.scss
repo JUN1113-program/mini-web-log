@@ -22,3 +22,35 @@
   }
   text-decoration: none;
 }
+
+@mixin card {
+  background-color: white;
+  border-bottom: solid 1px black;
+  border-right: solid 1px black;
+  margin: 10px 0 5px;
+  height: 120px;
+  padding: 10px;
+  width: 500px;
+  box-shadow: 0 0 5px $card-color;
+  &:hover{
+    box-shadow: 0 0 10px $card-color;
+  }
+}
+
+@mixin main-area {
+  width: 75%;
+  height: auto;
+  min-height: calc(100vh - 100px);
+  background-color: $main-color;
+  float: left;
+  padding: 10px 0;
+}
+
+@mixin noted($noted-height: 500px, $noted-width: 500px){
+  border: double 5px black;
+  margin: 0 auto;
+  box-shadow: 0 0 10px gray;
+  background-color: white;
+  max-width: $noted-width;
+  min-height: $noted-height;
+}

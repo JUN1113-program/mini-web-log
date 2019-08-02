@@ -1,7 +1,13 @@
 .flex-contener
   .mypage-area
-    %p.mypage-area__user-name 
-      = "#{@user.email}のページ" 
+    .mypage-area__user
+      .mypage-area__user__name 
+        - if user_signed_in? && current_user.id == @user.id
+          = "MYPAGE"
+        - else
+          = "#{@user.email}さんのページ" 
+      .mypage-area__user__count
+        = "記事数:#{@weblogs.count}"
     = render @weblogs
   .side-bar
     サイドバーです
