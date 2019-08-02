@@ -1,0 +1,22 @@
+.flex-contener
+  .detail-area
+    .detail-area__box
+      .detail-area__box__title
+        = @weblog.title
+      .detail-area__box__content
+        = @weblog.content
+      .detail-area__box__editor
+        = link_to user_path(@weblog.user.id) do
+          = @weblog.user.email
+      .detail-area__box__date
+        = l(@weblog.created_at, format: :long)
+    .detail-area__comments
+      .detail-area__comments__top
+        コメント一覧
+      = render "comment"
+    .detail-area__create-comment
+      .detail-area__create-comment__top
+      .detail-area__create-comment__input
+      .detail-area__create-comment__send
+  .side-bar
+    サイドバーです
