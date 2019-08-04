@@ -8,6 +8,18 @@
           = "#{@user.nickname}さんのページ" 
       .mypage-area__user__count
         = "記事数:#{@weblogs.count}"
+      .mypage-area__user__all-viewed
+        = "閲覧数:#{@allviewed}"
+      .mypage-area__user__all-comments
+        = "コメント数: #{@allcomments}"
     = render @weblogs
   .side-bar
-    サイドバーです
+    .side-bar__top
+      - if current_user.id == @user.id
+        あなたへのコメント一覧
+      - else
+        = "#{@user.nickname}さんへのコメント一覧"
+    .commented
+      - @weblogs.each do |weblog|
+        - weblog.comments.each do |comment|
+          = render partial: "comments/comment",locals:{weblog: weblog, comment: comment}
