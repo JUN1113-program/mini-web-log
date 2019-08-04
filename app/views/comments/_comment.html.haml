@@ -1,7 +1,13 @@
-.detail-area__comments__comment
-  .detail-area__comments__comment__name
+.side-bar__comments__comment
+  .side-bar__comments__comment__name
     = comment.user.nickname
-  .detail-area__comments__comment__date
+  .side-bar__comments__comment__date
     = l(comment.created_at, format: :long)
-  .detail-area__comments__comment__content
+  .side-bar__comments__comment__content
     = comment.comment
+  - if defined? weblog
+    - if comment.weblog.id == weblog.id
+      .side-bar__comments__comment__address
+        Address:
+        = link_to weblog_path(comment.weblog.id) do
+          = comment.weblog.title.truncate(20)
