@@ -10,25 +10,25 @@
         = @weblog.content
       .detail-area__box__image
         = image_tag @weblog.image.url if @weblog.image.present?
+      - if defined? @weblog.images
+        - @weblog.images.each do |image|
+          = image_tag image.image, class: "detail-area__box__images"
       .detail-area__box__editor
         = link_to user_path(@weblog.user.id) do
           = @weblog.user.nickname
       .detail-area__box__date
         = l(@weblog.created_at, format: :long)
-    
-    - unless @comments.length == 0
-      .detail-area__comments
-        .detail-area__comments__top
-          コメント一覧
-        = render @comments
+  .side-bar
     - if user_signed_in?
-      = form_for [@weblog,@comment], html: {class: "detail-area__create-comment"} do |f| 
-        .detail-area__create-comment__top
+      = form_for [@weblog,@comment], html: {class: "side-bar__create-comment"} do |f| 
+        .side-bar__create-comment__top
           コメント入力欄
-        .detail-area__create-comment__container
-          = f.text_area :comment, class: "detail-area__create-comment__container__input"
-          = button_tag type: "submit", class: "detail-area__create-comment__container__send" do
+        .side-bar__create-comment__container
+          = f.text_area :comment, class: "side-bar__create-comment__container__input"
+          = button_tag type: "submit", class: "side-bar__create-comment__container__send" do
             送信する
             = fa_icon "comment 2x"
-  .side-bar
-    サイドバーです
+    .side-bar__comments
+      .side-bar__comments__top
+        コメント一覧
+      = render @comments
