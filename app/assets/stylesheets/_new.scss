@@ -1,21 +1,38 @@
 .create-area{
   width: 75%;
   float: left;
-  display: flex;
-  flex-flow: column nowrap;
-  &__title{
-    width: 500px;
-    margin: 50px auto 0px;
-  }
-  &__content{
-    width: 500px;
-    min-height: 500px;
-    height: auto;
-    margin: 20px auto;
-  }
-  &__submit{
-    height: 50px;
-    width: 100px;
-    margin: 0 auto;
+  &__contents{
+    @include noted(400px,600px);
+    background-color: white;
+    margin: 20px auto 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    &__title{
+      width: 500px;
+      margin: 10px auto;
+    }
+    &__content{
+      width: 500px;
+      min-height: 300px;
+      height: auto;
+      margin: 10px auto;
+    }
+    &__button{
+      width: 300px;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      &__image{
+        & .hide{
+          display: none;
+        }
+      }
+      &__submit{
+        @include reset-form;
+      }
+    }
   }
 }
