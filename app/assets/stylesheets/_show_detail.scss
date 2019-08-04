@@ -7,7 +7,6 @@
     position: relative;
     &__title{
       font-size: 25px;
-      font-weight: bold;
       padding: 20px 0;
       height: 50px;
       width: 700px;
@@ -36,16 +35,24 @@
       overflow-wrap: break-word;
     }
     &__image{
-      max-width: 300px;
-      max-height: 300px;
-      margin: 0px auto 40px;
+      margin: 0px auto 30px;
       text-align: center;
       & img{
-      width: 300px;
-      height: 300px;
-      &:hover{
-        box-shadow: 0 0 3px gray;
+        max-width: 700px;
+        max-height: 700px;
+        &:hover{
+          box-shadow: 0 0 3px gray;
+        }
       }
+    }
+    &__images{
+      margin: 0 auto 30px;
+      max-width: 800px;
+      max-height: 700px;
+      & img{
+        &:hover{
+          box-shadow: 0 0 3px gray;
+        }
       }
     }
     &__editor{
@@ -66,67 +73,5 @@
       color: gray;
     }
   }
-  &__comments{
-    @include noted(100px, 800px);
-    margin-top: 30px;
-    &__top{
-      text-align: center;
-      font-size: 20px;
-      border-bottom: dotted 2px gray;
-    }
-    &__comment{
-      box-shadow: 2px 1px 2px gray;
-      max-width: 600px;
-      min-height: 20px;
-      margin: 10px auto;
-      border: solid 1px black;
-      position: relative;
-      &__name{
-        font-size: 15px;
-        border-bottom: solid 1px black;
-        text-align: center;
-        background-color: rgb(175, 248, 168);
-      }
-      &__date{
-        position: absolute;
-        right: 10px;
-        top: 0;
-      }
-      &__content{
-        margin: 10px;
-        overflow-wrap: break-word;
-      }
-    }
-  }
-
-  &__create-comment{
-    @include noted(100px,450px);
-    margin-top: 30px;
-    display: flex;
-    flex-flow: column wrap;
-    &__top{
-      font-size: 18px;
-      text-align: center;
-      border-bottom: dotted 2px gray;
-    }
-    &__container{
-        width: 400px;
-        height: 150px;
-        margin: 20px auto 10px;
-        position: relative;
-      &__input{
-        @include reset-form;
-        width: 100%;
-        height: 100%;
-      }
-      &__send{
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        @include reset-form;
-        color: gray;
-        font-size: 15px;
-      }
-    }
-  }
 }
+
