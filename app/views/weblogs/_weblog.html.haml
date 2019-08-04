@@ -1,19 +1,26 @@
-.weblogs
-  .weblogs__title
-    = link_to weblog_path(weblog.id) do
-      = weblog.title.truncate(30)
-  .weblogs__content
-    = weblog.content.truncate(100, omission: "   ", separator: "。")
-  .weblogs__editor
-    = link_to user_path(weblog.user.id) do
-      = weblog.user.nickname
-  .weblogs__date
-    = l(weblog.created_at, format: :long)
-  .weblogs__viewed
-    = "閲覧数: #{weblog.viewed}"
-  .weblogs__comment
-    = "コメント数: #{weblog.comments.length}"
-  - if user_signed_in?
-    - if weblog.user.id == current_user.id
-      = link_to "Edit",edit_weblog_path(weblog.id), class: "weblogs__edit"
-      = link_to "Delete", weblog_path(weblog.id), class: "weblogs__destroy", method: :delete
+.image-back
+  .weblogs
+    = image_tag weblog.image.url,class: "image" if weblog.image.present?
+    - if defined? weblog.images
+      - weblog.images.each do |image|
+        = image_tag image.image, class: "image"
+    .weblogs__line
+      .weblogs__line__title
+        = link_to weblog_path(weblog.id) do
+          = weblog.title.truncate(25)
+    .weblogs__box
+      .weblogs__box__content
+        = weblog.content.truncate(100, omission: "   ", separator: "。")
+    .weblogs__editor
+      = link_to user_path(weblog.user.id) do
+        = weblog.user.nickname
+    .weblogs__date
+      = l(weblog.created_at, format: :long)
+    .weblogs__viewed
+      = "閲覧数: #{weblog.viewed}"
+    .weblogs__comment
+      = "コメント数: #{weblog.comments.length}"
+    - if user_signed_in?
+      - if weblog.user.id == current_user.id
+        = link_to "Edit",edit_weblog_path(weblog.id), class: "weblogs__edit wf-Lobster"
+        = link_to "Delete", weblog_path(weblog.id), class: "weblogs__destroy wf-Lobster", method: :delete
