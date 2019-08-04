@@ -1,0 +1,7 @@
+.detail-area__comments__comment
+  .detail-area__comments__comment__name
+    = comment.user.nickname
+  .detail-area__comments__comment__date
+    = l(comment.created_at, format: :long)
+  .detail-area__comments__comment__content
+    = comment.comment
