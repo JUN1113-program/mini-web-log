@@ -9,7 +9,7 @@ class WeblogsController < ApplicationController
   end
 
   def create
-    @weblog = Weblog.create(weblog_params)
+    @weblog = Weblog.create(weblog_params.merge(viewed: 0))
     redirect_to root_path
   end
 
@@ -25,6 +25,10 @@ class WeblogsController < ApplicationController
 
   def show
     @weblog = Weblog.find(params[:id])
+    viewed = @weblog.viewed + 1
+    @weblog.update(viewed: viewed)
+    @comments = @weblog.comments.includes(:user)
+    @comment = Comment.new
   end
 
   def destroy
@@ -35,6 +39,6 @@ class WeblogsController < ApplicationController
 
   private
   def weblog_params
-    params.require(:weblog).permit(:title,:content).merge(user_id: current_user.id)
+    params.require(:weblog).permit(:title ,:content ,:image).merge(user_id: current_user.id)
   end
 end
