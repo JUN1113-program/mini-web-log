@@ -1,14 +1,18 @@
 .weblogs
   .weblogs__title
     = link_to weblog_path(weblog.id) do
-      = weblog.title
+      = weblog.title.truncate(30)
   .weblogs__content
     = weblog.content.truncate(100, omission: "   ", separator: "。")
   .weblogs__editor
     = link_to user_path(weblog.user.id) do
-      = weblog.user.email
+      = weblog.user.nickname
   .weblogs__date
     = l(weblog.created_at, format: :long)
+  .weblogs__viewed
+    = "閲覧数: #{weblog.viewed}"
+  .weblogs__comment
+    = "コメント数: #{weblog.comments.length}"
   - if user_signed_in?
     - if weblog.user.id == current_user.id
       = link_to "Edit",edit_weblog_path(weblog.id), class: "weblogs__edit"
