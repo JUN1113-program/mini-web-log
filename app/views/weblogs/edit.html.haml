@@ -1,7 +1,13 @@
 .flex-contener
-  = form_for @weblog ,html: {class: "create-area"} do |f|
-    = f.text_field :title, class: "create-area__title", placeholder: @weblog.title
-    = f.text_area :content, class: "create-area__content", placeholder: @weblog.content
-    = f.submit :submit, class: "create-area__submit", value: "UPDATE",method: :patch
+  .create-area
+    = form_for @weblog ,html: {class: "create-area__contents"} do |f|
+      = f.text_field :title, class: "create-area__contents__title", placeholder: @weblog.title
+      = f.text_area :content, class: "create-area__contents__content", placeholder: @weblog.content
+      .create-area__contents__button
+        = f.label :image, class:"create-area__contents__button__image" do
+          = f.file_field :image, class: "create-area__contents__button__image hide"
+          = fa_icon "image 3x"
+        = button_tag type:"submit", class: "create-area__contents__button__submit" do
+          =fa_icon "cloud-upload 5x"
   .side-bar
     サイドバーです
