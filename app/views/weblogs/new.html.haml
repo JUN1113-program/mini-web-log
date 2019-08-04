@@ -3,11 +3,10 @@
     = form_for @weblog ,html: {class: "create-area__contents"} do |f|
       = f.text_field :title, class: "create-area__contents__title", placeholder: "タイトル"
       = f.text_area :content, class: "create-area__contents__content", placeholder: "本文"
+      = f.text_field :image, class: "create-area__contetns__imageurl",placeholder:"URL"
       .create-area__contents__button
         = f.label :image, class:"create-area__contents__button__image" do
           = f.file_field :image, class: "create-area__contents__button__image hide"
           = fa_icon "image 3x"
         = button_tag type:"submit", class: "create-area__contents__button__submit" do
           =fa_icon "cloud-upload 5x"
-  .side-bar
-    サイドバーです
