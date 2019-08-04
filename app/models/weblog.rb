@@ -3,4 +3,5 @@ class Weblog < ApplicationRecord
   has_many :images
   has_many :comments
   mount_uploader :image, ImageUploader
+  validates :content, presence: true
 end
