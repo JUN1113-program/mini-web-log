@@ -5,7 +5,7 @@
         - if user_signed_in? && current_user.id == @user.id
           = "MYPAGE"
         - else
-          = "#{@user.email}さんのページ" 
+          = "#{@user.nickname}さんのページ" 
       .mypage-area__user__count
         = "記事数:#{@weblogs.count}"
     = render @weblogs
