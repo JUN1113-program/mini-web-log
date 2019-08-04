@@ -26,15 +26,15 @@ user/editでユーザー情報を編集できるように
 ~~routingの設定(resoucesで一括)~~
 - ~~web-logコントローラー~~
 - ~~usersコントローラーはdeviseで~~   
-- commentsコントローラー  
+- ~~commentsコントローラー~~  
 
 modelの作成
 - ~~usersはデバイスで~~
 - ~~Blog-model~~
 - ~~アソシエーションの設定~~  
 - ~~DBの実装~~  
-- comment-model
-- imageはcarrywaveとminimagikで
+- ~~comment-model~~
+- ~~imageはcarrywaveとminimagikで~~
 
 ## ビューの完成  
 所要時間( 600分)  
