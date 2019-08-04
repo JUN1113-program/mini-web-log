@@ -18,7 +18,7 @@
     overflow-wrap: break-word;
   }
   &__editor{
-    font-size: 10px;
+    font-size: 12px;
     position: absolute;
     bottom: 18px;
     right: 5px;
@@ -35,7 +35,21 @@
     color: gray;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 2px;
+  }
+  &__viewed{
+    font-size: 11px;
+    color: gray;
+    position: absolute;
+    bottom: 0;
+    right: 120px;
+  }
+  &__comment{
+    font-size: 11px;
+    color: gray;
+    position: absolute;
+    bottom: 0;
+    right: 180px;
   }
   &__edit{
     @include reset_a-tag(gray);
