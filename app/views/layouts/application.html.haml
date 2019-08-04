@@ -7,10 +7,13 @@
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
+    %link{href: "https://fonts.googleapis.com/earlyaccess/kokoro.css", rel: "stylesheet"}/
+    %link{href: "https://fonts.googleapis.com/css?family=Lobster&display=swap",rel:"stylesheet"}/
+
+  %body.wf-kokoro 
     %headr.header
-      .header__back-image
-        = link_to "MiniWebLog",root_path, class: "header__back-image__title"
+      .header__back-image.wf-Lobster
+        = link_to "Mini-Web-Log",root_path, class: "header__back-image__title"
         .header__back-image__menu
           - if user_signed_in?
             = link_to user_path(current_user.id), class: "header__back-image__menu__mypage" do
