@@ -2,15 +2,24 @@
   .index-area
     = render @weblogs
   .side-bar
-    .search
-      検索機能が入る予定です
-    .ranking
-      ランキング機能が入ります
-      .ranking__comment
-        コメント数によるランキングです
-      .ranking__viewed
-        閲覧数によるランキングです
-      .ranking__like
-        いいね数によるランキングです
-      .ranking__random
-        ランダムで表示されるランキングです
+    .side-bar__scroll
+      .search
+        %input(type = "text-field" class = "search__input")
+        = button_tag type: "submit",class:"search__button" do
+          = fa_icon "search 2x"
+      .ranking
+        .ranking__comment
+          .ranking__comment__word
+            = fa_icon "star"
+            コメント数ランキング
+          = render partial: "ranking/rank", collection: @comment_rank
+        .ranking__viewed
+          .ranking__viewed__word
+            = fa_icon "star"
+            閲覧数ランキング
+          = render partial: "ranking/rank", collection: @viewed_rank
+        .ranking__random
+          .ranking__random__word
+            = fa_icon "star"
+            ランダムランキング
+          = render partial: "ranking/rank", collection: @random_rank
