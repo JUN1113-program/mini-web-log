@@ -1,0 +1,82 @@
+.ranking{
+  height: 770px;
+  &__comment{
+    height: 220px;
+    width: 100%;
+    border-bottom: dashed 2px gray;
+    & .fa{
+      color: yellow;
+      text-shadow: 0 0 1px black;
+    }
+    &__word{
+      font-size: 15px;
+      
+      text-align: center;
+    }
+  }
+  &__viewed{
+    height: 220px;
+    width: 100%;
+    border-bottom: dashed 2px gray;
+    & .fa{
+      color: yellow;
+      text-shadow: 0 0 1px black;
+    }
+    &__word{
+      margin-top: 10px;
+      font-size: 15px;
+      
+      text-align: center;
+    }
+  }
+  &__random{
+    height: 220px;
+    width: 100%;
+    & .fa{
+      color: yellow;
+      text-shadow: 0 0 1px black;
+    }
+    &__word{
+      margin-top: 10px;
+      font-size: 15px;
+      
+      text-align: center;
+    }
+  }
+
+  & .rank{
+    position: relative;
+    height: 50px;
+    border-bottom: solid 1px gray;
+    margin: 10px 15px;
+    &__title{
+      min-width: 30px;
+      & a{
+        @include reset_a-tag(black);
+      }
+      &:hover{
+        border-bottom: dotted 2px gray;
+      }
+    }
+    &__user{
+      position: absolute;
+      font-size: 13px;
+      right: 0;
+      bottom: 12px;
+      & a{
+        @include reset_a-tag(gray);
+      }
+      &:hover{
+        text-shadow: 1px 1px 1px gray;
+      }
+    }
+    &__date{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 11px;
+      color: gray;
+      
+    }
+  }
+}
