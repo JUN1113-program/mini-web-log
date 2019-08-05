@@ -1,0 +1,9 @@
+.rank
+  %span.rank__title
+    = link_to weblog_path(rank.id) do
+      = rank.title.truncate(20)
+  .rank__user
+    = link_to user_path(rank.user.id) do
+      = rank.user.nickname
+  .rank__date
+    = l(rank.created_at, format: :long)

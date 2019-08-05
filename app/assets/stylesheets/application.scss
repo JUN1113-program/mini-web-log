@@ -4,13 +4,17 @@
 @import "mixin/reset_form";
 @import "mixin/word-setting";
 @import "font-awesome";
+@import "config/font";
 
 // スタイルシートの宣言
 @import "style";
 @import "index";
 @import "new";
 @import "weblogs";
-@import "shared/side-bar";
+@import "side-bar";
 @import "mypage";
 @import "devise";
 @import "show_detail";
+@import "side-bar/ranking";
+@import "side-bar/search";
+@import "side-bar/comments";

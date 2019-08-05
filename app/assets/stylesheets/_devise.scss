@@ -3,7 +3,7 @@ $padding-height: 200px;
   padding-top: $padding-height;
   height: calc(100vh - #{$padding-height});
   width: 100%;
-  background-color: azure;
+  background-color: $main-color;
   .devise{
     display: flex;
     flex-flow: column wrap;
@@ -11,7 +11,7 @@ $padding-height: 200px;
     & h2{
       text-align: center;
       font-size: 25px;
-      font-weight: bold;
+      
       border-bottom: dotted 2px gray;
       padding-top:30px;
       margin-bottom: 70px;

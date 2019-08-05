@@ -6,5 +6,21 @@
   justify-content: space-around;
   &__user{
     @include card;
+    border: solid 1px black;
+    &__name{
+      font-size: 23px;
+      
+      text-align: center;
+      border-bottom: dotted 2px gray;
+    }
+    &__count{
+      text-align: center;
+    }
+    &__all-viewed{
+      text-align: center;
+    }
+    &__all-comments{
+      text-align: center;
+    }
   }
 }

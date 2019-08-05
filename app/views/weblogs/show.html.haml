@@ -2,21 +2,30 @@
   .detail-area
     .detail-area__box
       .detail-area__box__title
-        = @weblog.title
+        = fa_icon "neuter",class:"detail-area__box__title__neuter--left"
+        .detail-area__box__title--title
+          = @weblog.title.truncate(25)
+        = fa_icon "neuter",class:"detail-area__box__title__neuter--right"
       .detail-area__box__content
         = @weblog.content
+      .detail-area__box__image
+        = image_tag @weblog.image.url if @weblog.image.present?
       .detail-area__box__editor
         = link_to user_path(@weblog.user.id) do
-          = @weblog.user.email
+          = @weblog.user.nickname
       .detail-area__box__date
         = l(@weblog.created_at, format: :long)
-    .detail-area__comments
-      .detail-area__comments__top
-        コメント一覧
-      = render "comment"
-    .detail-area__create-comment
-      .detail-area__create-comment__top
-      .detail-area__create-comment__input
-      .detail-area__create-comment__send
   .side-bar
-    サイドバーです
+    - if user_signed_in?
+      = form_for [@weblog,@comment], html: {class: "side-bar__create-comment"} do |f| 
+        .side-bar__create-comment__top
+          コメント入力欄
+        .side-bar__create-comment__container
+          = f.text_area :comment, class: "side-bar__create-comment__container__input"
+          = button_tag type: "submit", class: "side-bar__create-comment__container__send" do
+            送信する
+            = fa_icon "comment 2x"
+    .side-bar__comments
+      .side-bar__comments__top
+        コメント一覧
+      = render @comments

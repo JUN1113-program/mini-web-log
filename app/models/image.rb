@@ -1,3 +1,3 @@
 class Image < ApplicationRecord
-  belongs_to :group
+  belongs_to :weblog
 end

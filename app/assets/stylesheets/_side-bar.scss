@@ -1,0 +1,9 @@
+.side-bar{
+  height: 100%;
+  position: fixed;
+  right: 0;
+  width: 25%;
+  background-color: $main-color;
+  border-left: dashed 2px gray;
+  overflow-y: auto;
+}
