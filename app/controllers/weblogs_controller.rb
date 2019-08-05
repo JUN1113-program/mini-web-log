@@ -10,7 +10,6 @@ class WeblogsController < RankingController
 
   def create
     @weblog = Weblog.create(weblog_params.merge(viewed: 0))
-    @image = Image.create(image_params.merge(weblog_id: @weblog.id))
     
     redirect_to root_path
   end
@@ -42,9 +41,5 @@ class WeblogsController < RankingController
   private
   def weblog_params
     params.require(:weblog).permit(:title ,:content ,:image).merge(user_id: current_user.id)
-  end
-
-  def image_params
-    params.require(:weblog).permit(:image)
   end
 end

@@ -10,9 +10,6 @@
         = @weblog.content
       .detail-area__box__image
         = image_tag @weblog.image.url if @weblog.image.present?
-      - if defined? @weblog.images
-        - @weblog.images.each do |image|
-          = image_tag image.image, class: "detail-area__box__images"
       .detail-area__box__editor
         = link_to user_path(@weblog.user.id) do
           = @weblog.user.nickname

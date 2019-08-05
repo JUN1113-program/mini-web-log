@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_02_123601) do
+ActiveRecord::Schema.define(version: 2019_08_04_112622) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "rate"
@@ -24,10 +24,10 @@ ActiveRecord::Schema.define(version: 2019_08_02_123601) do
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "image", null: false
     t.bigint "weblog_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "imageurl"
     t.index ["weblog_id"], name: "index_images_on_weblog_id"
   end
 
