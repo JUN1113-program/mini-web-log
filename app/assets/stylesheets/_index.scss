@@ -10,13 +10,15 @@
   }
   .pagenation{
     background-color: white;
-    height: 30px;
-    width: 75%;
-    bottom: 0;
-    left: 0;
+ 
     &__page{
+      height: 30px;
+      width: 75%;
+      bottom: 0;
+      left: 0;
       font-size: 20px;
       line-height: 30px;
+      float:left;
       & a{
         @include reset_a-tag(gray);
       }
