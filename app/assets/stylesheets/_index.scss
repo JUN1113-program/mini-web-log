@@ -8,4 +8,19 @@
     align-content: space-around;
     justify-content: space-around;
   }
+  .pagenation{
+    background-color: white;
+    height: 30px;
+    width: 75%;
+    bottom: 0;
+    left: 0;
+    &__page{
+      font-size: 20px;
+      line-height: 30px;
+      & a{
+        @include reset_a-tag(gray);
+      }
+      text-align: center;
+    }
+  }
 }

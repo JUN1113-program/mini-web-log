@@ -1,6 +1,9 @@
 .flex-contener
   .index-area
     = render @weblogs
+  .pagenation
+    .pagenation__page.wf-Lobster
+      = paginate(@weblogs)
   .side-bar
     .side-bar__scroll
       .search
