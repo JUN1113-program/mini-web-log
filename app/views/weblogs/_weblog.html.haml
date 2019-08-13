@@ -7,7 +7,7 @@
     .weblogs__line
       .weblogs__line__title
         = link_to weblog_path(weblog.id) do
-          = weblog.title.truncate(25)
+          = weblog.title.truncate(20)
     .weblogs__box
       .weblogs__box__content
         = weblog.content.truncate(100, omission: "   ", separator: "。")
