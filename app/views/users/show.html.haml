@@ -1,11 +1,11 @@
 .flex-contener
   .mypage-area
     .mypage-area__user
-      .mypage-area__user__name 
-        - if user_signed_in? && current_user.id == @user.id
+      .mypage-area__user__name
+        - if current_user&.id == @user.id
           = "MYPAGE"
         - else
-          = "#{@user.nickname}さんのページ" 
+          = "#{@user.nickname}さんのページ"
       .mypage-area__user__count
         = "記事数:#{@weblogs.count}"
       .mypage-area__user__all-viewed
@@ -15,7 +15,7 @@
     = render @weblogs
   .side-bar
     .side-bar__top
-      - if current_user.id == @user.id
+      - if current_user&.id == @user.id
         あなたへのコメント一覧
       - else
         = "#{@user.nickname}さんへのコメント一覧"
