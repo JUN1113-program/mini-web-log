@@ -52,3 +52,6 @@ production:
   database: mini-web-log_production
   username: mini-web-log
   password: <%= ENV['MINI-WEB-LOG_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
