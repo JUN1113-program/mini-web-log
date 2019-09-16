@@ -1,9 +1,6 @@
 .image-back
   .weblogs
     = image_tag weblog.image.url,class: "image" if weblog.image.present?
-    - if defined? weblog.images
-      - weblog.images.each do |image|
-        = image_tag image.imageurl, class: "image"
     .weblogs__line
       .weblogs__line__title
         = link_to weblog_path(weblog.id) do
