@@ -1,5 +1,6 @@
 class WeblogsController < RankingController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :set_weblog, only: [:edit, :update, :show, :destroy]
   def index
     @weblogs = Weblog.order("created_at DESC").page(params[:page]).per(10)
   end
@@ -39,6 +40,10 @@ class WeblogsController < RankingController
   end
 
   private
+  def set_weblog
+    @weblog = Weblog.find(params[:id])
+  end
+
   def weblog_params
     params.require(:weblog).permit(:title ,:content ,:image).merge(user_id: current_user.id)
   end
