@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
   def create
     Comment.create(comment_params)
     redirect_to weblog_path(params[:weblog_id])
