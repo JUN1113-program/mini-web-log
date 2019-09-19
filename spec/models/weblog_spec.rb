@@ -18,4 +18,21 @@ describe Weblog do
       expect(weblog).to be_valid
     end
   end
+  context "投稿できない場合" do
+    it "titleが未入力である" do
+      weblog = build(:weblog, title: "")
+      weblog.valid?
+      expect(weblog.errors[:title]).to include("を入力してください")
+    end
+    it "contentが未入力である" do
+      weblog = build(:weblog, content: "")
+      weblog.valid?
+      expect(weblog.errors[:content]).to include("を入力してください")
+    end
+    it "title、contentが未入力である" do
+      weblog = build(:weblog, title: "", content: "")
+      weblog.valid?
+      expect(weblog.errors[:content]).to include("を入力してください")
+    end
+  end
 end
