@@ -1,47 +1,14 @@
 .ranking{
   height: 770px;
   &__comment{
-    height: 220px;
-    width: 100%;
-    border-bottom: dashed 2px gray;
-    & .fa{
-      color: yellow;
-      text-shadow: 0 0 1px black;
-    }
-    &__word{
-      font-size: 15px;
-      
-      text-align: center;
-    }
+    @include ranking;
   }
   &__viewed{
-    height: 220px;
-    width: 100%;
-    border-bottom: dashed 2px gray;
-    & .fa{
-      color: yellow;
-      text-shadow: 0 0 1px black;
-    }
-    &__word{
-      margin-top: 10px;
-      font-size: 15px;
-      
-      text-align: center;
-    }
+    @include ranking;
   }
   &__random{
-    height: 220px;
-    width: 100%;
-    & .fa{
-      color: yellow;
-      text-shadow: 0 0 1px black;
-    }
-    &__word{
-      margin-top: 10px;
-      font-size: 15px;
-      
-      text-align: center;
-    }
+    @include ranking;
+    padding-bottom: 5px;
   }
 
   & .rank{
