@@ -9,7 +9,7 @@
 @mixin font-data($color: black, $size: 15px, $weight: normal) {
   color: $color;
   font-size: $size;
-  font-weight: $weight;  
+  font-weight: $weight;
 }
 
 // AタグのデフォルトのCSSを打ち消す
