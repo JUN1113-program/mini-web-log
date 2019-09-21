@@ -52,3 +52,20 @@
   max-width: $noted-width;
   min-height: $noted-height;
 }
+
+@mixin ranking {
+  height: 205px;
+  width: 100%;
+  border-bottom: dashed 2px gray;
+  & .fa{
+    color: yellow;
+    text-shadow: 0 0 1px black;
+  }
+  &__word{
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+}
