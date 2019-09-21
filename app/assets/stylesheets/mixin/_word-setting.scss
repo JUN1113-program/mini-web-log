@@ -9,7 +9,7 @@
 @mixin font-data($color: black, $size: 15px, $weight: normal) {
   color: $color;
   font-size: $size;
-  font-weight: $weight;  
+  font-weight: $weight;
 }
 
 // AタグのデフォルトのCSSを打ち消す
@@ -37,8 +37,8 @@
 
 @mixin main-area {
   width: 75%;
-  height:auto;
-  min-height: calc(100vh - 100px);
+  height: auto;
+  min-height: calc(100vh - 150px);
   background-color: $main-color;
   float: left;
   padding: 10px 0;
@@ -51,4 +51,35 @@
   background-color: white;
   max-width: $noted-width;
   min-height: $noted-height;
+}
+
+@mixin ranking {
+  height: 205px;
+  width: 100%;
+  border-bottom: dashed 2px gray;
+  & .fa{
+    color: yellow;
+    text-shadow: 0 0 1px black;
+  }
+  &__word{
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+// フォームやbuttonにはじめから適応されているCSSを打ち消す
+@mixin reset_form {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  resize: none;
+}
+
 }

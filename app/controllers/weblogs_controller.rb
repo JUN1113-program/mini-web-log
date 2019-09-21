@@ -4,7 +4,7 @@ class WeblogsController < RankingController
   before_action :another_user?, only: :destroy
 
   def index
-    @weblogs = Weblog.order("created_at DESC").page(params[:page]).per(10)
+    @weblogs = Weblog.order("created_at DESC").page(params[:page]).per(8)
   end
 
   def new

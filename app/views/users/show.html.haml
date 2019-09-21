@@ -19,7 +19,7 @@
         あなたへのコメント一覧
       - else
         = "#{@user.nickname}さんへのコメント一覧"
-    .commented
+    .side-bar__comments
       - @weblogs.each do |weblog|
         - weblog.comments.each do |comment|
           = render partial: "comments/comment",locals:{weblog: weblog, comment: comment}
