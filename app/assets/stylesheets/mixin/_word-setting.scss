@@ -37,8 +37,8 @@
 
 @mixin main-area {
   width: 75%;
-  height:auto;
-  min-height: calc(100vh - 100px);
+  height: auto;
+  min-height: calc(100vh - 150px);
   background-color: $main-color;
   float: left;
   padding: 10px 0;
