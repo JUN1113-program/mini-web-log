@@ -1,5 +1,5 @@
 .ranking{
-  height: 770px;
+  height: 700px;
   &__comment{
     @include ranking;
   }
@@ -13,7 +13,7 @@
 
   & .rank{
     position: relative;
-    height: 50px;
+    height: 45px;
     border-bottom: solid 1px gray;
     margin: 10px 15px;
     &__title{
@@ -43,7 +43,6 @@
       right: 0;
       font-size: 11px;
       color: gray;
-      
     }
   }
 }
