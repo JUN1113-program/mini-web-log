@@ -1,31 +1,32 @@
-$padding-height: 200px;
-.devise-body{
-  padding-top: $padding-height;
-  height: calc(100vh - #{$padding-height});
+.devise{
+  padding-top: 200px;
   width: 100%;
   background-color: $main-color;
-  .devise{
+  &--registrations{
+    padding-top: 130px;
+  }
+  &__body{
     display: flex;
     flex-flow: column wrap;
-    @include noted;
+    @include noted(430px, 500px);
     & h2{
       text-align: center;
       font-size: 25px;
-      
       border-bottom: dotted 2px gray;
-      padding-top:30px;
-      margin-bottom: 70px;
+      padding-top: 20px;
     }
     & .new_user{
       font-size: 18px;
       text-align: center;
       border-bottom: dotted 2px gray;
-      padding-bottom: 100px;
     }
     & .if_sessions{
       text-align: right;
+      margin: 10px;
       & a{
-        @include reset_a-tag(gray);
+        @include reset_a-tag(black);
+      }
+    }
     &__inputForm{
       & label{
         line-height: 40px;
@@ -38,6 +39,7 @@ $padding-height: 200px;
         border: 1px black solid;
         padding: 3px 10px;
       }
+      margin: 10px;
     }
   }
 }
