@@ -17,17 +17,14 @@ class WeblogsController < RankingController
   end
 
   def edit
-    @weblog = Weblog.find(params[:id])
   end
 
   def update
-    @weblog = Weblog.find(params[:id])
     @weblog.update(weblog_params)
     redirect_to root_path
   end
 
   def show
-    @weblog = Weblog.find(params[:id])
     viewed = @weblog.viewed + 1
     @weblog.update(viewed: viewed)
     @comments = @weblog.comments.includes(:user)
@@ -35,7 +32,6 @@ class WeblogsController < RankingController
   end
 
   def destroy
-    @weblog = Weblog.find(params[:id])
     @weblog.destroy
     redirect_to root_path
   end
