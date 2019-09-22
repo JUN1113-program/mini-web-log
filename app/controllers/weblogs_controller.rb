@@ -17,6 +17,7 @@ class WeblogsController < RankingController
   end
 
   def edit
+    render "weblogs/new"
   end
 
   def update
