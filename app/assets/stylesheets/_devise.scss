@@ -26,6 +26,17 @@ $padding-height: 200px;
       text-align: right;
       & a{
         @include reset_a-tag(gray);
+    &__inputForm{
+      & label{
+        line-height: 40px;
+      }
+      @include devise_form();
+    }
+    &__button{
+      & input{
+        @include reset_form();
+        border: 1px black solid;
+        padding: 3px 10px;
       }
     }
   }
