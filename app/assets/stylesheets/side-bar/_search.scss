@@ -1,16 +1,26 @@
 .search{
   height: 25px;
-  width: 90%;
+  width: 80%;
   margin: 10px auto;
-  text-align: right;
   border: solid 2px gray;
+  padding-left: 10px;
   &__input{
     @include reset_form;
+    text-align: left;
     height: 25px;
-    width: 80%;
+    width: 87%;
   }
   &__button{
     @include reset_form;
-    margin-right: 10px;
+  }
+}
+.side-bar--serach{
+  box-sizing: border-box;
+  padding: 10px;
+  &__word{
+    margin: 5px;
+  }
+  &__num{
+    margin: 5px;
   }
 }
