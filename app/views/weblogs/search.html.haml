@@ -1,0 +1,13 @@
+.flex-contener
+  .index-area
+    = render @weblogs
+  .pagenation
+    .pagenation__page.wf-Lobster
+      = paginate(@weblogs)
+  .side-bar
+    = render "search"
+    .side-bar--serach
+      .side-bar--serach__word
+        = "検索ワード: #{params[:input]}"
+      .side-bar--serach__num
+        = "検索結果: #{@weblogs.length.to_i} 個"
