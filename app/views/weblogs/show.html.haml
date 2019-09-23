@@ -7,7 +7,7 @@
           = @weblog.title.truncate(25)
         = fa_icon "neuter",class:"detail-area__box__title__neuter--right"
       .detail-area__box__content
-        = @weblog.content
+        = simple_format @weblog.content
       .detail-area__box__image
         = image_tag @weblog.image.url if @weblog.image.present?
       .detail-area__box__editor
@@ -17,7 +17,7 @@
         = l(@weblog.created_at, format: :long)
   .side-bar
     - if user_signed_in?
-      = form_for [@weblog,@comment], html: {class: "side-bar__create-comment"} do |f| 
+      = form_for [@weblog,@comment], html: {class: "side-bar__create-comment"} do |f|
         .side-bar__create-comment__top
           コメント入力欄
         .side-bar__create-comment__container
