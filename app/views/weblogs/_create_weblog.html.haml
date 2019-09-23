@@ -1,0 +1,15 @@
+.create-area
+  = form_for weblog ,html: {class: "create-area__contents"} do |f|
+    = f.text_field :title, class: "create-area__contents__title", placeholder: "タイトル", value: weblog&.title, autocomplete: 'off'
+    = f.text_area :content, class: "create-area__contents__content", placeholder: "本文", value: weblog&.content
+    .create-area__contents__buttons
+      = f.label :image, class:"create-area__contents__buttons__image" do
+        = f.file_field :image, class: "create-area__contents__buttons__image hide", accept: ".jpg, .jpeg, .png"
+        = fa_icon "image lg"
+        %span 画像を添付する
+      = button_tag type:"submit", class: "create-area__contents__buttons__submit" do
+        = fa_icon "paper-plane 2x"
+        - if weblog.title
+          %span 更新する
+        - else
+          %span 投稿する
