@@ -25,9 +25,9 @@
               %p 投稿
             = link_to destroy_user_session_path, class: "header__back-image__menu__icon", method: :delete do
               = fa_icon("sign-out 3x")
-              %p サインアウト
+              %p ログアウト
           - else
             = link_to new_user_session_path, class: "header__back-image__menu__icon" do
               = fa_icon("sign-in 3x")
-              %sp ログイン
+              %p ログイン
     = yield
