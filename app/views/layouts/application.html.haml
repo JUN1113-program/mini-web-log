@@ -1,15 +1,15 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}
     %title MiniWebLog
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = favicon_link_tag('icon.png')
-    %link{href: "https://fonts.googleapis.com/earlyaccess/kokoro.css", rel: "stylesheet"}/
-    %link{href: "https://fonts.googleapis.com/css?family=Lobster&display=swap",rel:"stylesheet"}/
+    %link{href: "https://fonts.googleapis.com/earlyaccess/kokoro.css", rel: "stylesheet"}
+    %link{href: "https://fonts.googleapis.com/css?family=Lobster&display=swap",rel:"stylesheet"}
 
   %body.wf-kokoro
     %headr.header

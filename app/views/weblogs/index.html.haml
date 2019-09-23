@@ -6,10 +6,7 @@
       = paginate(@weblogs)
   .side-bar
     .side-bar__scroll
-      .search
-        %input(type = "text-field" class = "search__input")
-        = button_tag type: "submit",class:"search__button" do
-          = fa_icon "search 2x"
+      = render "search"
       .ranking
         .ranking__comment
           .ranking__comment__word

@@ -1,0 +1,5 @@
+.search
+  = form_tag(search_weblogs_path, method: :get) do
+    %input(type = "search" class = "search__input" name = "input" autocomplete = "off" placeholder = "検索フォーム" required)
+    = button_tag type: "submit",class:"search__button" do
+      = fa_icon "search 2x"
