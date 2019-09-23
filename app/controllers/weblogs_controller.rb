@@ -16,10 +16,6 @@ class WeblogsController < RankingController
     redirect_to root_path
   end
 
-  def edit
-    render "weblogs/new"
-  end
-
   def update
     @weblog.update(weblog_params)
     redirect_to root_path
