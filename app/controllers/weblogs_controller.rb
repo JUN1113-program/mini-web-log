@@ -33,6 +33,10 @@ class WeblogsController < RankingController
     redirect_to root_path
   end
 
+  def search
+    @weblogs = Weblog.where("title Like(?)","%#{params[:input]}%").page(params[:page]).per(8).includes(:user)
+  end
+
   private
   def set_weblog
     @weblog = Weblog.find(params[:id])
