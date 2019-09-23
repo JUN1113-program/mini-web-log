@@ -1,5 +1,4 @@
 .image-back{
-
   .weblogs{
     @include card;
     @include clearfloat;
@@ -20,16 +19,16 @@
       width: 500px;
       height: 30px;
       z-index: 1;
+      & a{
+        @include reset_a-tag(black);
+      }
       &__title{
         font-size: 22px;
         text-align: center;
-        
-        & a{
-          @include reset_a-tag(black);
-        }
       }
     }
     &__box{
+      @include reset_a-tag(black);
       position: absolute;
       top:35px;
       bottom:0;
@@ -38,18 +37,11 @@
       width: 500px;
       height: 100px;
       &__content{
-      margin: 2px 0;
-      font-size: 14px;
-      text-align: center;
-      overflow-wrap: break-word;
+        margin: 2px 0;
+        font-size: 14px;
+        text-align: center;
+        overflow-wrap: break-word;
       }
-    }
-    
-    &__content{
-      margin: 2px 0;
-      font-size: 14px;
-      text-align: center;
-      overflow-wrap: break-word;
     }
     &__editor{
       font-size: 12px;
@@ -58,7 +50,6 @@
       right: 5px;
       & a{
         @include reset_a-tag(gray);
-  
       }
       & :hover{
         text-shadow: 0 0 1px gray;
@@ -98,11 +89,6 @@
       @include reset_a-tag(gray);
       bottom: 5px;
       left: 50px;
-    }
-    & img{
-      &:hover{
-        box-shadow: 0 0 8px gray;
-      }
     }
   }
 }

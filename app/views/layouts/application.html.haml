@@ -15,15 +15,19 @@
     %headr.header
       .header__back-image.wf-Lobster
         = link_to "Mini-Web-Log",root_path, class: "header__back-image__title"
-        .header__back-image__menu
+        .header__back-image__menu.wf-kokoro
           - if user_signed_in?
-            = link_to user_path(current_user.id), class: "header__back-image__menu__mypage" do
+            = link_to user_path(current_user.id), class: "header__back-image__menu__icon" do
               = fa_icon("cog 3x")
-            = link_to new_weblog_path, class: "header__back-image__menu__post" do
+              %p マイページ
+            = link_to new_weblog_path, class: "header__back-image__menu__icon" do
               = fa_icon("paper-plane 3x")
-            = link_to destroy_user_session_path, class: "header__back-image__menu__inout", method: :delete do
+              %p 投稿
+            = link_to destroy_user_session_path, class: "header__back-image__menu__icon", method: :delete do
               = fa_icon("sign-out 3x")
+              %p サインアウト
           - else
-            = link_to new_user_session_path, class: "header__back-image__menu__inout" do
+            = link_to new_user_session_path, class: "header__back-image__menu__icon" do
               = fa_icon("sign-in 3x")
+              %sp ログイン
     = yield

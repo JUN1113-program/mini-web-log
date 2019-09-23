@@ -1,11 +1,11 @@
 .image-back
   .weblogs
-    = image_tag weblog.image.url,class: "image" if weblog.image.present?
+    = image_tag weblog.image.url, class: "image" if weblog.image.present?
     .weblogs__line
-      .weblogs__line__title
-        = link_to weblog_path(weblog.id) do
+      = link_to weblog_path(weblog.id) do
+        .weblogs__line__title
           = weblog.title.truncate(20)
-    .weblogs__box
+    = link_to weblog_path(weblog.id), class: "weblogs__box" do
       .weblogs__box__content
         = weblog.content.truncate(100, omission: "   ", separator: "。")
     .weblogs__editor
