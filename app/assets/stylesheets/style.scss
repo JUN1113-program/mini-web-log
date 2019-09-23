@@ -28,26 +28,19 @@
       margin-top:5px;
       margin-right: 10px;
       box-shadow: 0 0 5px gray;
-      &__mypage{
-        line-height: 100px;
-        text-align: center;
+      &__icon{
         @include reset_a-tag($icon);
+        width: 80px;
+        padding: 10px;
         background-color: transparent;
-        text-shadow: 0 0 4px gray;
-      }
-      &__post{
-        line-height: 100px;
         text-align: center;
-        @include reset_a-tag($icon);
-        background-color: transparent;
-        text-shadow: 0 0 4px gray;
-      }
-      &__inout{
-        line-height: 100px;
-        text-align: center;
-        @include reset_a-tag($icon);
-        background-color: transparent;
-        text-shadow: 0 0 4px gray;
+        & .fa{
+          text-shadow: 0 0 4px gray;
+        }
+        & p{
+          font-size: 13px;
+          text-align: center;
+        }
       }
     }
   }
