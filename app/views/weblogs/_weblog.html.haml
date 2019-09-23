@@ -13,10 +13,8 @@
         = weblog.user.nickname
     .weblogs__date
       = l(weblog.created_at, format: :long)
-    .weblogs__viewed
-      = "閲覧数: #{weblog.viewed}"
-    .weblogs__comment
-      = "コメント数: #{weblog.comments.length}"
+    .weblogs__num
+      = "コメント数: #{weblog.comments.length}　閲覧数: #{weblog.viewed}"
     - if user_signed_in?
       - if weblog.user.id == current_user.id
         = link_to "Edit",edit_weblog_path(weblog.id), class: "weblogs__edit wf-Lobster"
