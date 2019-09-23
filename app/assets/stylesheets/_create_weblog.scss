@@ -1,0 +1,64 @@
+.create-area{
+  padding-top: 20px;
+  &__contents{
+    @include noted(600px,600px);
+    background-color: white;
+    margin: 20px auto 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-content: center;
+    &__title{
+      @include reset-form;
+      width: 500px;
+      margin: 10px auto;
+      @include text-center(25px);
+      padding: 10px 0;
+      font-size: 25px;
+      border-bottom: 1px solid gray;
+      &:focus{
+        border-bottom: 1px solid black;
+      }
+    }
+    &__content{
+      flex: 6;
+      @include reset-form;
+      box-sizing: border-box;
+      padding-left: 5px;
+      width: 500px;
+      min-height: 300px;
+      height: auto;
+      margin: 10px auto;
+      border: 1px solid gray;
+      &:focus{
+        border: 1px solid black;
+      }
+    }
+    &__imageurl{
+      width: 500px;
+      margin: 10px auto;
+    }
+    &__buttons{
+      width: 350px;
+      margin: 0 auto;
+      padding: 5px 0 10px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      &__image{
+        & .hide{
+          display: none;
+        }
+        & span{
+          font-size: 20px;
+        }
+      }
+      &__submit{
+        @include reset-form;
+        & span{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
