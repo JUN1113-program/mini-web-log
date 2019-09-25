@@ -1,50 +1,37 @@
-# 進行表
+# Mini-Web-Log
+簡易なブログアプリケーションです
+[![Image from Gyazo](https://i.gyazo.com/265bdb94a39b0bd21c06dc0c55d86126.png)](https://gyazo.com/265bdb94a39b0bd21c06dc0c55d86126)
 
-## 概要
----
-## ~~DateBase設計~~
-所要時間( 30分)  
-~~ER図~~  
-~~create_DB.mdの編集~~  
-## 仮置のビューとスタイルシートを作成
-所要時間( 300分)  
-~~applicationでheader領域の作成~~  
-~~indexでメインのブログ一覧が表示されるように~~   
-~~editでブログの編集画面へ~~    
-~~createでブログの作成画面へ~~  
-~~showでブログの詳細が表示されるように~~  
-~~一旦showでmypageに飛ぶように設定~~  
-searchでブログ内容の検索ができるように  
-user/editでユーザー情報を編集できるように  
+## スタートガイド
+https://miniweblog.herokuapp.com/
 
-## Railsのコード記述  
-所要時間( 300分)  
-~~deviseのインストールとSetting~~   
-~~ブログの投稿機能の実装 create~~  
-~~ブログの編集と削除の実装 edit update destory~~  
-~~routingの設定(resoucesで一括)~~
-- ~~web-logコントローラー~~
-- ~~usersコントローラーはdeviseで~~   
-- ~~commentsコントローラー~~  
+https://miniweblog.herokuapp.com/users/sign_up
+にアクセスし、アカウントを作成する
+[![Image from Gyazo](https://i.gyazo.com/e91a2c3b462e0d77a445b2a3c70f1cc4.png)](https://gyazo.com/e91a2c3b462e0d77a445b2a3c70f1cc4)
 
-modelの作成
-- ~~usersはデバイスで~~
-- ~~Blog-model~~
-- ~~アソシエーションの設定~~  
-- ~~DBの実装~~  
-- ~~comment-model~~
-- ~~imageはcarrywaveとminimagikで~~
-
-## ビューの完成  
-所要時間( 600分)  
-~~スタイルシートをいじる~~  
-~~side_barの実装~~
-
-### アイディアメモ
-~~短冊に表示される文字数を制限する~~  
-~~タイトルクリックで全部が表示される~~  
-~~短冊に画像を表示する~~  
-~~Webフォントを利用する~~
+右上アイコンの紙飛行機から記事の投稿ができます。
 
 
+### 必要条件
+chromeの最新版をご利用ください
 
+＊local環境で利用する場合はRuby2.5.1,Rails5.2,Bundler 2.0.2の導入が必要です
+
+### local環境へのインストール
+
+```cmd
+$ cd 任意のディレクトリに移動
+$ git clone https://github.com/JUN1113-program/mini-web-log.git
+$ cd mini-web-log/
+$ bundle install
+$ bundle exec rake db:migrate
+$ bundle exec rails s
+```
+
+その後chromeにて
+http://localhost:3000/ にアクセスします
+
+## テストの実行
+```cmd
+$ bundle exec rspec
+```
