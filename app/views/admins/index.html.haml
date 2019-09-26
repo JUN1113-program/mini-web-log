@@ -1,0 +1,19 @@
+.flex-contener
+  %table.users(border = "1")
+    %tbody
+      %tr
+        %th
+          ID
+        %th
+          ニックネーム
+        %th
+          記事
+      - @users.each do |user|
+        %tr
+          %td
+            = user.id
+          %td
+            = user.nickname
+          %td
+            - user.weblogs.each do |weblog|
+              = link_to weblog.title, admin_path(weblog.id), method: :delete

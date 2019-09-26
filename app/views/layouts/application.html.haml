@@ -30,4 +30,8 @@
             = link_to new_user_session_path, class: "header__back-image__menu__icon" do
               = fa_icon("sign-in 3x")
               %p ログイン
+          - if current_user&.admin
+            = link_to admins_path, class: "header__back-image__menu__icon" do
+              = fa_icon("eye 3x")
+              %p 管理者画面
     = yield
