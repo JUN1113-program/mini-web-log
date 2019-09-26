@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:show]
+  resources :admins, only:[:index,:delete]
 end
