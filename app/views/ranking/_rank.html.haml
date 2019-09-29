@@ -1,7 +1,7 @@
 .rank
   %span.rank__title
     = link_to weblog_path(rank.id) do
-      = rank.title.truncate(20)
+      = rank.title.truncate(15)
   .rank__user
     = link_to user_path(rank.user.id) do
       = rank.user.nickname
