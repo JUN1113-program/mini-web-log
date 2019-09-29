@@ -75,3 +75,4 @@ gem 'pry-rails'
 gem "mini_magick"
 gem "carrierwave"
 gem 'kaminari'
+gem "fog-aws"
