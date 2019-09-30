@@ -1,7 +1,7 @@
 class WeblogsController < RankingController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_weblog, only: [:edit, :update, :show, :destroy]
-  before_action :another_user?, only: [:edit, :destroy]
+  before_action :another_user?, only: [:edit, :update, :destroy]
 
   def index
     @weblogs = Weblog.order("created_at DESC").page(params[:page]).per(8).includes(:user)
