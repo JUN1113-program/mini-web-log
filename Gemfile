@@ -76,3 +76,4 @@ gem "mini_magick"
 gem "carrierwave"
 gem 'kaminari'
 gem "fog-aws"
+gem 'google-analytics-rails'
